@@ -44,7 +44,7 @@
 
 If you have CUDA graphic card, please follow the requirements of [NVlabs/stylegan3](https://github.com/NVlabs/stylegan3#requirements).  
 
-The usual installation steps involve the following commands, they should set up the correct CUDA version and all the python packages
+Follow the coommands for a regular install, it should set up CUDA and python packages properly.
 
 ```
 conda env create python=3.7 -f environment.yml
@@ -57,7 +57,7 @@ Then install the additional requirements
 pip install -r requirements
 ```
 
-Otherwise (for GPU acceleration on MacOS with Silicon Mac M1/M2, or just CPU) try the following:
+Otherwise (for GPU acceleration on MacOS with M1/M2 silicon, or just CPU acceleration) try the following:
 
 ```sh
 cat environment.yml | \
@@ -81,12 +81,16 @@ Feel free to try other pretrained StyleGAN.
 
 ## Run DragGAN GUI
 
-To start the DragGAN GUI, simply run:
+To start the DragGAN GUI, run:
 ```sh
 sh scripts/gui.sh
 ```
 
-This GUI supports editing GAN-generated images. To edit a real image, you need to first perform GAN inversion using tools like [PTI](https://github.com/danielroich/PTI). Then load the new latent code and model weights to the GUI.
+This GUI supports editing GAN-generated images.
+To edit a real image:
+
+1.first perform GAN inversion using tools like [PTI](https://github.com/danielroich/PTI).        
+2.Then load the new latent code and model weights to the GUI.
 
 You can run DragGAN Gradio demo as well:
 ```sh
@@ -95,14 +99,14 @@ python visualizer_drag_gradio.py
 
 ## Acknowledgement
 
-This code is developed based on [StyleGAN3](https://github.com/NVlabs/stylegan3). Part of the code is borrowed from [StyleGAN-Human](https://github.com/stylegan-human/StyleGAN-Human).
+This code is developed based on [StyleGAN3](https://github.com/NVlabs/stylegan3). Parts of the code have been borrowed from [StyleGAN-Human](https://github.com/stylegan-human/StyleGAN-Human).
 
 ## License
 
 The code related to the DragGAN algorithm is licensed under [CC-BY-NC](https://creativecommons.org/licenses/by-nc/4.0/).
 However, most of this project are available under a separate license terms: all codes used or modified from [StyleGAN3](https://github.com/NVlabs/stylegan3) is under the [Nvidia Source Code License](https://github.com/NVlabs/stylegan3/blob/main/LICENSE.txt).
 
-Any form of use and derivative of this code must preserve the watermarking functionality showing "AI Generated".
+Any form of use and derivative of this code MUST PRESERVE the watermarking functionality showing "AI Generated".
 
 ## BibTeX
 
